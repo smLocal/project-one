@@ -8,15 +8,15 @@ body {
 
 .container {
   /*background-color: red; doesnt work*/
-  width: 100%;
+  width: 612px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .col {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   text-align: left;
   transition: all 1.0s linear;
   border: 2px dotted black;
@@ -30,16 +30,20 @@ body {
 }
 
 .left {
+  float: left;
 
 }
 
 .middle {
+  float: center;
 
 }
 
 .right {
+  float: right;
 
 }
+
 
 .front {
 
