@@ -5,18 +5,112 @@
   <title></title>
 </head>
 <body>
-  <section>
-    <div onclickd="me(this)" id="1" class="">1</div>
-    <div onclick="me(this)" id="2" class="">2</div>
-    <div onclick="me(this)" id="3" class="">3</div>
-    <div onclick="me(this)" id="4" class="">4</div>
-    <div onclick="me(this)" id="5" class="">5</div>
-    <div onclick="me(this)" id="6" class="">6</div>
-    <div onclick="me(this)" id="7" class="">7</div>
-    <div onclick="me(this)" id="8" class="">8</div>
-    <div onclick="me(this)" id="9" class="">9</div>
+  <div class="container">
+      <div class="row">
+        <button onclick="start()">Start</button>
+      </div>
 
-  </section>
+      <div class="row">
+        <div class="col left" id="1" onclick="">
+          <div class="front face">
+            <p>null tile1</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+         </div>
+
+        <div class="col middle" id="2" onclick="">
+          <div class="front face">
+            <p>null tile2</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+        </div>
+
+        <div class="col right" id="3" onclick="">
+          <div class="front face">
+            <p>null tile3</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col left" id="4" onclick=""></div>
+          <div class="front face">
+            <p>null tile</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+        <div class="col middle" id="5" onclick=""></div>
+          <div class="front face">
+            <p>null tile</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+        <div class="col right" id="6" onclick=""></div>
+          <div class="front face">
+            <p>null tile</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col left" id="7" onclick=""></div>
+          <div class="front face">
+            <p>null tile</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+        <div class="col middle" id="8" onclick=""></div>
+          <div class="front face">
+            <p>null tile</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+        <div class="col right" id="9" onclick=""></div>
+          <div class="front face">
+            <p>null tile</p>
+          </div>
+          <div class="back face">
+            <p>uncovered tile</p>
+          </div>
+      </div>
+
+      <div class="row">
+        <button onclick="reset()">Reset</button>
+      </div>
+    </div>
+
+
+  <!-- <div class="container">
+    <div class="row">
+
+    </div>
+  </div>
+ -->
+  <!-- <section>
+    <div monitorClick="me(this)" id="1" class="divs">1</div>
+    <div onclick="me(this)" id="2" class="divs">2</div>
+    <div onclick="me(this)" id="3" class="divs">3</div>
+    <div onclick="me(this)" id="4" class="divs">4</div>
+    <div onclick="me(this)" id="5" class="divs">5</div>
+    <div onclick="me(this)" id="6" class="divs">6</div>
+    <div onclick="me(this)" id="7" class="divs">7</div>
+    <div onclick="me(this)" id="8" class="divs">8</div>
+    <div onclick="me(this)" id="9" class="divs">9</div>
+
+  </section> -->
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

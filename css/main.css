@@ -1,0 +1,65 @@
+.uncovered {
+
+}
+
+body {
+
+}
+
+.container {
+  /*background-color: red; doesnt work*/
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col {
+  float: left;
+  width: 100px;
+  height: 100px;
+  text-align: left;
+  transition: all 1.0s linear;
+  border: 2px dotted black;
+}
+
+.row {
+  /*background-color: red; /*works */
+  float: left;
+  width: 100%;
+  border: 2px dotted black;
+}
+
+.left {
+
+}
+
+.middle {
+
+}
+
+.right {
+
+}
+
+.front {
+
+}
+
+.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+ /* background-color: lightgray;*/
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /*background-color: red;*/
+}
+
+
