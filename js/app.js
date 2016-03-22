@@ -14,6 +14,26 @@
 //     $('.container').addClass('red');
 // });
 
+  // console.log('yup, something else broken');
+  // $(this).toggleClass('.flip');
+
+
+
+// create a counter that counts number of sticks
+// i assume it would be inside of game loop
+
+var counter = function() {
+  if ($(type).hasClass('stick')) {
+    var count = 0;
+    count++;
+    if (count === 3) {
+
+      return reset;
+    }
+  }
+
+};
+
 
 
 $('.card').on('click', function() {
@@ -23,14 +43,16 @@ $('.card').on('click', function() {
   // console.log($(this).children()[1]);
   if ( $(type).hasClass( 'bomb' )) {
    window.alert("You lose");
-    start();
-
+    return start();
   // } else if ( 'safe' || 'stick') {
+  } else if ($(type).hasClass( 'safe' )) {
+    window.alert("that was close");
+  } else if ($(type).hasClass( 'stick' )) {
+    window.alert("You grabbed a stick! Good job!");
+  } else if ($(type).hasClass( 'stick' )) {
+    // insert something that counts sticks, genius
   }
-
-
-  // console.log('yup, something else broken');
-  // $(this).toggleClass('.flip');
+// end of game
 });
 
 // jQuery for onclick
@@ -44,7 +66,6 @@ var $el = $('this.el');
 var Card = function (type) {
   this.type = type;
 };
-
 
 // bunch of cards in itx
 var start = function() {
@@ -74,6 +95,8 @@ var start = function() {
   });
 };
 
+var reset = start();
+
 
 
 // change something to reveal the card underneath
@@ -99,10 +122,6 @@ var start = function() {
 // var stickCount = function() {
 //   'stick'+
 // };
-
-
-
-
 
 
 
