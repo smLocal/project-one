@@ -13,7 +13,7 @@ body {
   margin-right: auto;
 }
 
-.col {
+.card {
 /*  float: left;
 */
   display: inline-block;
@@ -46,9 +46,9 @@ body {
 }
 */
 
-.front {
+/*.front {
   display: block;
-}
+}*/
 
 .back {
   transform: rotateY(180deg);

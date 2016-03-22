@@ -41,7 +41,7 @@ var start = function() {
   // target all cards $('.col')
 
   // loop thru each card and
-  $('.col').each(function(index, el) {
+  $('.back').each(function(index, el) {
     var type = deck[index].type;
     // apply a card as a class
     $(el).addClass(type);
