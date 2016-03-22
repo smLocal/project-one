@@ -28,7 +28,7 @@ var counter = function() {
     count++;
     if (count === 3) {
 
-      return reset;
+      // return reset;
     }
   }
 
@@ -43,7 +43,7 @@ $('.card').on('click', function() {
   // console.log($(this).children()[1]);
   if ( $(type).hasClass( 'bomb' )) {
    window.alert("You lose");
-    return start();
+    return reset();
   // } else if ( 'safe' || 'stick') {
   } else if ($(type).hasClass( 'safe' )) {
     window.alert("that was close");
@@ -95,8 +95,11 @@ var start = function() {
   });
 };
 
-var reset = start();
 
+// stackoverflow: javascript button
+var reset = function() {
+  location.reload();
+};
 
 
 // change something to reveal the card underneath
