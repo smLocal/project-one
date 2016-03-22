@@ -13,11 +13,7 @@ body {
   margin-right: auto;
 }
 
-<<<<<<< HEAD
-.card {
-/*  float: left;
-*/
-=======
+
 /*.card {
 
 >>>>>>> master
@@ -52,15 +48,14 @@ body {
 }
 */
 
-<<<<<<< HEAD
 /*.front {
   display: block;
 }*/
-=======
+
 .flip {
   transform: rotateY(180deg);
 }
->>>>>>> master
+
 
 /*.container:hover .card {
   transform: rotateY(180deg);
