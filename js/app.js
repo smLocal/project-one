@@ -1,14 +1,37 @@
 
-var onclick = function(){
+// var onclick = function(){
   // event.target.remove();             // used this event click, tweak it below, basic template
-  console.log(Card.class);
+  // event.target.this.back.transforms();
+  // event.this.addAttr(rotateY(180deg));
+  // event.this.toggleClass($('.container.card'));
   // if (event.target.style.textDecoration === 'line-through') {    //if else to see if strike has occured
   //   event.target.remove();
   // } else {event.target.style.textDecoration = 'line-through';}
-};
+// };
 
-// Math.random
-// }
+// $(this).on( 'click', function () {
+//   console.log('yup, something else broken');
+//     $('.container').addClass('red');
+// });
+
+
+
+$('.card').on('click', function() {
+  $(this).addClass('flip');
+  var type = $(this).children()[1];
+
+  // console.log($(this).children()[1]);
+  if ( $(type).hasClass( 'bomb' )) {
+   window.alert("You lose");
+    start();
+
+  // } else if ( 'safe' || 'stick') {
+  }
+
+
+  // console.log('yup, something else broken');
+  // $(this).toggleClass('.flip');
+});
 
 // jQuery for onclick
 // append the style or add style that transforms
@@ -38,17 +61,48 @@ var start = function() {
   ];
 
   deck = shuffle(deck);
-  // target all cards $('.col')
+  // target all cards $('.card')
 
   // loop thru each card and
   $('.back').each(function(index, el) {
     var type = deck[index].type;
     // apply a card as a class
     $(el).addClass(type);
+    // $('div').text('hi');
+    // console.log(deck);
+    // deck[index].value;
   });
 };
 
+
+
 // change something to reveal the card underneath
+// $( '.back' ).toggle(
+//   function() {
+//     $( this ).toggleClass( ".flip" );
+//   }, function() {
+//     $( this ).toggleClass( ".flip" );
+//   }
+// );
+
+// var flipCard = function() {
+
+// };
+// var strType = type;
+// strType = $( "p:first" ).text();
+// $( "p:last" ).html( str );
+
+// p.text(el)
+
+
+
+// var stickCount = function() {
+//   'stick'+
+// };
+
+
+
+
 
 
 
@@ -70,8 +124,4 @@ function shuffle(array) {
 
   return copy;
 }
-
-
-
-
 
