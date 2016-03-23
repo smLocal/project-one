@@ -22,23 +22,23 @@
 // create a counter that counts number of sticks
 // i assume it would be inside of game loop
 
-var counter = function() {
-  if ($(type).hasClass('stick')) {
-    var count = 0;
-    count++;
-    if (count === 3) {
-
-      // return reset;
-    }
-  }
-
-};
-
 
 
 $('.card').on('click', function() {
   $(this).addClass('flip');
   var type = $(this).children()[1];
+  var count = 0;
+  var counter = function() {
+    if ($(type).hasClass('stick')) {
+      window.alert("You got a stick. Now stick it somewhere");
+      (count++);
+      for (count === 3) {
+        window.alert("You won. You're a nerd!!!");
+        return reset;
+      }
+    }
+
+  };
 
   // console.log($(this).children()[1]);
   if ( $(type).hasClass( 'bomb' )) {
@@ -48,9 +48,7 @@ $('.card').on('click', function() {
   } else if ($(type).hasClass( 'safe' )) {
     window.alert("that was close");
   } else if ($(type).hasClass( 'stick' )) {
-    window.alert("You grabbed a stick! Good job!");
-  } else if ($(type).hasClass( 'stick' )) {
-    // insert something that counts sticks, genius
+    return counter();
   }
 // end of game
 });
