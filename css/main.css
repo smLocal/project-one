@@ -65,13 +65,17 @@ body {
   transform: rotateY(180deg);
 }
 
-.pointer {
-  cursor: pointer;
-}
-
 /*.custom {
-   cursor: url("http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/1/9/19mmm-new.jpg"), auto;
+  cursor: url("http://www.clearpng.com/contents/sharedthumbimages/0335f/clearPNG-Food-Fruit-Fruit-Red-Apple-946-1.png"), auto;
 }*/
+
+/*cursor-size: cover; ????*/
+
+
+
+.pointer {
+   cursor: pointer;
+}
 
 /*.container:hover .card {
   transform: rotateY(180deg);
@@ -101,7 +105,7 @@ body {
 }*/
 
 .stick {
-  background-image: url("");
+  background-image: url("http://icons.iconseeker.com/png/fullsize/turtles---teenage-mutant-ninja/stick.png");
   background-size: 100%;
 }
 

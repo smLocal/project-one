@@ -37,7 +37,7 @@ $('.card').on('click', function() {
   } else if ($(type).hasClass( 'safe' )) {
     // $(this).toggleClass('animated zoomIn');
     $(this).addClass('flip');
-    $(type).text('SAFE');
+    // $(type).text('SAFE');
   } else if ($(type).hasClass( 'stick' )) {
 
     array.push('stick');
