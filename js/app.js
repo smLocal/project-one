@@ -22,23 +22,12 @@
 // create a counter that counts number of sticks
 // i assume it would be inside of game loop
 
-
+var array = [];
 
 $('.card').on('click', function() {
   $(this).addClass('flip');
   var type = $(this).children()[1];
-  var count = 0;
-  var counter = function() {
-    if ($(type).hasClass('stick')) {
-      window.alert("You got a stick. Now stick it somewhere");
-      (count++);
-      for (count === 3) {
-        window.alert("You won. You're a nerd!!!");
-        return reset;
-      }
-    }
 
-  };
 
   // console.log($(this).children()[1]);
   if ( $(type).hasClass( 'bomb' )) {
@@ -48,11 +37,34 @@ $('.card').on('click', function() {
   } else if ($(type).hasClass( 'safe' )) {
     window.alert("that was close");
   } else if ($(type).hasClass( 'stick' )) {
-    return counter();
+
+    array.push('stick');
+    if (array.length === 3) {
+      return reset();
+    }
   }
 // end of game
 });
 
+
+//   var counter = function() {
+//     for( var i=0; i < count.length; i++) {
+//       counter=count[i];
+
+//     }
+//   };
+
+// $(this).push
+
+
+       //  (count++);
+       //  while(count < 2) {
+       //    return window.alert("You got a stick. Now stick it somewhere");
+       //    } else
+       //    if (count === 3) {
+       //    window.alert("You won. You're a nerd!!!");return reset;
+
+       // };
 // jQuery for onclick
 // append the style or add style that transforms
 // front of card to .back
@@ -67,6 +79,7 @@ var Card = function (type) {
 
 // bunch of cards in itx
 var start = function() {
+  window.alert('warning...brain combustion imminent!!!');
   var deck = [
     new Card('stick'),
     new Card('stick'),
@@ -96,6 +109,7 @@ var start = function() {
 
 // stackoverflow: javascript button
 var reset = function() {
+  window.alert('resetted');
   location.reload();
 };
 
