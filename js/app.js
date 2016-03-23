@@ -35,7 +35,9 @@ $('.card').on('click', function() {
     return reset();
   // } else if ( 'safe' || 'stick') {
   } else if ($(type).hasClass( 'safe' )) {
-    window.alert("that was close");
+    // $(this).toggleClass('animated zoomIn');
+    $(this).addClass('flip');
+    $(type).text('SAFE');
   } else if ($(type).hasClass( 'stick' )) {
 
     array.push('stick');
@@ -77,9 +79,36 @@ var Card = function (type) {
   this.type = type;
 };
 
-// bunch of cards in itx
+
+
+
+
 var start = function() {
-  window.alert('warning...brain combustion imminent!!!');
+  // window.confirm('warning...brain combustion imminent!!!');
+  //http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
+  //stack overflow
+
+//   var show = function(){
+//   };
+//   var hide = function() {
+//   };
+//   (function(){
+//     var myDiv = document.getElementById("myDiv");
+
+//     var show = function(){
+//       myDiv.style.display = "block";
+//       setTimeout(hide, 1900);  // 5 seconds
+//     };
+
+//     var hide = function(){
+//       myDiv.style.display = "none";
+//     };
+
+// show();
+//   })();
+//   show();
+//   hide();
+// bunch of cards in itx
   var deck = [
     new Card('stick'),
     new Card('stick'),
