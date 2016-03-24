@@ -30,10 +30,10 @@ var array = [];
 
 $('.card').hide();
 
+
 $('.card').on('click', function() {
   $(this).addClass('flip');
   var type = $(this).children()[1];
-
   if ( $(type).hasClass( 'bomb' )) {
     window.alert("You lose");
     return reset();
@@ -69,9 +69,8 @@ var start = function() {
   // window.confirm('warning...brain combustion imminent!!!');
   //http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
   //stack overflow
-
-
-  (function(){
+  //calls gify
+  var gif = (function(){
     var myDiv = document.getElementById("myDiv");
 
     var show = function(){
@@ -83,7 +82,10 @@ var start = function() {
     var hide = function(){
       myDiv.style.display = "none";
     };
-  })();
+    show();
+  });
+  gif();
+
 
   // bunch of cards in itx
   $('.card').show();
