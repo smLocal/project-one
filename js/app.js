@@ -22,6 +22,12 @@
 // create a counter that counts number of sticks
 // i assume it would be inside of game loop
 
+$(document).ready(
+        function () {
+            $('.card').hide();
+        });
+
+
 var array = [];
 
 $('.card').on('click', function() {
@@ -109,6 +115,7 @@ var start = function() {
 //   show();
 //   hide();
 // bunch of cards in itx
+  $('.card').show();
   var deck = [
     new Card('stick'),
     new Card('stick'),

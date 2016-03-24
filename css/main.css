@@ -3,7 +3,9 @@
 }
 
 body {
-  background-color: pink;
+  cursor: url("http://qsf5.com/wp-content/uploads/gallery/icons/dukenukem3d.png"), default;
+  background-image: url("http://img13.deviantart.net/68fc/i/2010/135/4/0/background_11_by_elenadudina.jpg");
+  /*background-color: pink;*/
 
 }
 /*//http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
@@ -22,6 +24,13 @@ body {
   background-color: transparent;
 }
 
+.myButton{
+    background:url(http://www.pathguy.com/dukehead.gif) no-repeat;
+    border:none;
+    cursor: url("http://qsf5.com/wp-content/uploads/gallery/icons/dukenukem3d.png"), default;
+    width: 400px;
+    height: 400px;
+}
 
 /*.card {
 
@@ -66,16 +75,17 @@ body {
 }
 
 /*.custom {
-  cursor: url("http://www.clearpng.com/contents/sharedthumbimages/0335f/clearPNG-Food-Fruit-Fruit-Red-Apple-946-1.png"), auto;
+  cursor: url("http://www.pathguy.com/dukehead.gif"), auto;
+}*/
+
+/*.pointer {
+   cursor: pointer;
 }*/
 
 /*cursor-size: cover; ????*/
 
 
 
-.pointer {
-   cursor: pointer;
-}
 
 /*.container:hover .card {
   transform: rotateY(180deg);
