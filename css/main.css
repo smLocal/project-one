@@ -2,18 +2,41 @@
 
 }
 
+/*video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(./backgroundLoop.mov) no-repeat;
+    background-size: cover;
+}*/
+
+
 body {
   cursor: url("http://qsf5.com/wp-content/uploads/gallery/icons/dukenukem3d.png"), default;
   background-image: url("http://img13.deviantart.net/68fc/i/2010/135/4/0/background_11_by_elenadudina.jpg");
   /*background-color: pink;*/
-
 }
+
 /*//http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
 */
 #myDiv {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
   display: inline;
+
 }
 
 .container {
