@@ -22,6 +22,10 @@
 // create a counter that counts number of sticks
 // i assume it would be inside of game loop
 
+var row = $($('.row').get(1));
+for (var i = 0; i < 5; i++) {
+  row.clone().appendTo('.container');
+}
 var array = [];
 
 $('.card').hide();
@@ -75,6 +79,7 @@ var start = function() {
       setTimeout(hide, 1900);  // 5 seconds
     };
 
+
     var hide = function(){
       myDiv.style.display = "none";
     };
@@ -90,6 +95,12 @@ var start = function() {
     new Card('bomb'),
     new Card('bomb'),
     new Card('bomb'),
+    new Card('safe'),
+    new Card('safe'),
+    new Card('safe'),
+    new Card('safe'),
+    new Card('safe'),
+    new Card('safe'),
     new Card('safe'),
     new Card('safe'),
     new Card('safe'),
