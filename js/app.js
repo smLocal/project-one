@@ -23,9 +23,9 @@
 // i assume it would be inside of game loop
 
 $(document).ready(
-        function () {
-            $('.card').hide();
-        });
+  function () {
+    $('.card').hide();
+    });
 
 
 var array = [];
@@ -37,7 +37,7 @@ $('.card').on('click', function() {
 
   // console.log($(this).children()[1]);
   if ( $(type).hasClass( 'bomb' )) {
-   window.alert("You lose");
+    window.alert("You lose");
     return reset();
   // } else if ( 'safe' || 'stick') {
   } else if ($(type).hasClass( 'safe' )) {
@@ -49,8 +49,8 @@ $('.card').on('click', function() {
     array.push('stick');
     if (array.length === 3) {
       return reset();
-    }
-  }
+      }
+      }
 // end of game
 });
 
@@ -115,27 +115,27 @@ var start = function() {
 //   show();
 //   hide();
 // bunch of cards in itx
-  $('.card').show();
-  var deck = [
-    new Card('stick'),
-    new Card('stick'),
-    new Card('stick'),
-    new Card('bomb'),
-    new Card('bomb'),
-    new Card('bomb'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe')
+$('.card').show();
+var deck = [
+  new Card('stick'),
+  new Card('stick'),
+  new Card('stick'),
+  new Card('bomb'),
+  new Card('bomb'),
+  new Card('bomb'),
+  new Card('safe'),
+  new Card('safe'),
+  new Card('safe')
   ];
 
-  deck = shuffle(deck);
+deck = shuffle(deck);
   // target all cards $('.card')
 
   // loop thru each card and
-  $('.back').each(function(index, el) {
-    var type = deck[index].type;
+$('.back').each(function(index, el) {
+  var type = deck[index].type;
     // apply a card as a class
-    $(el).addClass(type);
+  $(el).addClass(type);
     // $('div').text('hi');
     // console.log(deck);
     // deck[index].value;
@@ -194,4 +194,3 @@ function shuffle(array) {
 
   return copy;
 }
-
