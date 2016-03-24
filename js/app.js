@@ -92,6 +92,9 @@ var start = function() {
     new Card('bomb'),
     new Card('safe'),
     new Card('safe'),
+    new Card('safe'),
+    new Card('safe'),
+    new Card('safe'),
     new Card('safe')
   ];
 
