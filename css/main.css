@@ -2,35 +2,45 @@
 
 }
 
-/*video#bgvid {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(./backgroundLoop.mov) no-repeat;
-    background-size: cover;
-}*/
-
-
-body {
-  cursor: url("http://qsf5.com/wp-content/uploads/gallery/icons/dukenukem3d.png"), default;
-  background-image: url("http://img13.deviantart.net/68fc/i/2010/135/4/0/background_11_by_elenadudina.jpg");
-  /*background-color: pink;*/
+.instructions {
+  width: 231px;
+  height: 202px;
+  background-color: black;
+  font-size: 29px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #D51;
+  position: absolute;
+  top: 13px;
+  right: 0;
+  color: #EF0;
 }
 
-/*//http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
-*/
+
+.myStart {
+    background:url(http://www.pathguy.com/dukehead.gif) no-repeat;
+    border:none;
+    cursor: url("http://www.engine001.com/community/resources/nail_pipe_bomb-TTooNU.gif"), default;
+    width: 400px;
+    height: 400px;
+}
+
+.myReset {
+    background:url(http://3.bp.blogspot.com/-keoHFX81C-Q/TaZ1NDMMsCI/AAAAAAAABx4/6BJ8WiqBTeY/s1600/logo-128.png) no-repeat;
+    border:none;
+    cursor: url("http://www.engine001.com/community/resources/nail_pipe_bomb-TTooNU.gif"), default;
+    width: 128px;
+    height: 128px;
+    top: 0;
+}
+
+body {
+  cursor: url("http://www.engine001.com/community/resources/nail_pipe_bomb-TTooNU.gif"), default;
+  background-image: url("http://img13.deviantart.net/68fc/i/2010/135/4/0/background_11_by_elenadudina.jpg");
+}
+
 #myDiv {
-  /*width: 100%;
-  height: 100%;*/
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -47,102 +57,23 @@ body {
 }
 
 .container {
-  /*background-color: red; doesnt work*/
   width: 650px;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
 }
 
-.myButton{
-    background:url(http://www.pathguy.com/dukehead.gif) no-repeat;
-    border:none;
-    cursor: url("http://qsf5.com/wp-content/uploads/gallery/icons/dukenukem3d.png"), default;
-    width: 400px;
-    height: 400px;
-}
-
-/*.card {
-
->>>>>>> master
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  text-align: left;
-  transition: all 1.0s linear;
-  border: 2px dotted black;
-}*/
 
 .row {
-  /*background-color: red; /*works */
-  /*float: left;*/
   display: inline-block;
   width: 578px;
   border: none;
   height:190px;
 }
 
-/*.left {
-  float: left;
-}
-
-.middle {
-  float: center;
-
-}
-
-.right {
-  float: right;
-}
-*/
-
-/*.front {
-  display: block;
-}*/
-
 .flip {
   transform: rotateY(180deg);
 }
-
-/*.custom {
-  cursor: url("http://www.pathguy.com/dukehead.gif"), auto;
-}*/
-
-/*.pointer {
-   cursor: pointer;
-}*/
-
-/*cursor-size: cover; ????*/
-
-
-
-
-/*.container:hover .card {
-  transform: rotateY(180deg);
-
-}*/
-
-
-/*.front {
-  display: block;
-}*/
-
-/*.back {
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: black;
-  display: inline-block;
-  background-color: blue;
-}
-
-.face {
-  position: absolute;
-  width: 190px;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: red;
-}*/
 
 .stick {
   background-image: url("http://icons.iconseeker.com/png/fullsize/turtles---teenage-mutant-ninja/stick.png");
@@ -172,8 +103,6 @@ body {
   width: 190px;
   height: 190px;
   backface-visibility: hidden;
-  /*background-image: url("https://astrotarotjo.files.wordpress.com/2011/09/s.gif");
-  background-size: 97%;*/
   background-color: blue;
 }
 
@@ -182,6 +111,4 @@ body {
   transform: rotateY(180deg);
   box-sizing: border-box;
   padding: 10px;
-  /*color: white;
-  background-color: lightgray;*/
 }

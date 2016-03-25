@@ -1,36 +1,14 @@
-
-// var onclick = function(){
-  // event.target.remove();             // used this event click, tweak it below, basic template
-  // event.target.this.back.transforms();
-  // event.this.addAttr(rotateY(180deg));
-  // event.this.toggleClass($('.container.card'));
-  // if (event.target.style.textDecoration === 'line-through') {    //if else to see if strike has occured
-  //   event.target.remove();
-  // } else {event.target.style.textDecoration = 'line-through';}
-// };
-
-// $(this).on( 'click', function () {
-//   console.log('yup, something else broken');
-//     $('.container').addClass('red');
-// });
-
-  // console.log('yup, something else broken');
-  // $(this).toggleClass('.flip');
-
-
-
-// create a counter that counts number of sticks
-// i assume it would be inside of game loop
-
+//takes row div, and clones // 5 could be var, if needed
 var row = $($('.row').get(1));
 for (var i = 0; i < 5; i++) {
   row.clone().appendTo('.container');
 }
 var array = [];
 
+//makes less on landing
 $('.card').hide();
 
-
+// nuke: you lose gif
 var gif2 = (function(){
   var myDiv2 = document.getElementById("myDiv2");
 
@@ -43,28 +21,27 @@ var gif2 = (function(){
     myDiv2.style.display = "none";
   };
   show();
-});
+}); // end of nuke function
 
+// flips cards
 $('.card').on('click', function() {
   $(this).addClass('flip');
-  var type = $(this).children()[1];
-  if ( $(type).hasClass( 'bomb' )) {
+  var type = $(this).children()[1]; //targets 2nd child of card div
+  if ( $(type).hasClass( 'bomb' )) {                                    // lose
     $('.card').hide();
     gif2();
     setTimeout(reset, 1900);
     window.alert("Wow, you suck at life...smh");
-    // return reset();
 
-  } else if ($(type).hasClass( 'safe' )) {
+  } else if ($(type).hasClass( 'safe' )) {                              // pass
 
     $(this).addClass('flip');
 
-  } else if ($(type).hasClass( 'stick' )) {
+  } else if ($(type).hasClass( 'stick' )) {                             //3===win
 
     array.push('stick');
 
     if (array.length === 3) {
-      // TODO add prompt you win
       reset();
       window.alert('You won, Nerd');
     }
@@ -72,25 +49,18 @@ $('.card').on('click', function() {
 // end of game
 });
 
-
-// jQuery for onclick
-// append the style or add style that transforms
-// front of card to .back
-// or maybe a .remove style that is followed by
-// an add style to .back
-
+// create card
 var Card = function (type) {
   this.type = type;
 };
 
 var start = function() {
-  // window.confirm('warning...brain combustion imminent!!!');
   //http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
-  //stack overflow
   //calls gify
   var gif = (function(){
     var myDiv = document.getElementById("myDiv");
 
+    // start gif
     var show = function(){
       myDiv.style.display = "block";
       myDiv.style.width = "100%";
@@ -105,7 +75,7 @@ var start = function() {
   gif();
 
   var showBoard = function() {
-    // bunch of cards in itx
+    // bunch of cards in it
     $('.card').show();
 
     var deck = [
@@ -140,16 +110,16 @@ var start = function() {
     });
   };
 
+  //divs shown after click
   setTimeout(showBoard, 1900);
-  $('.myButton').hide();
+  $('.myStart').hide();
+  $('.instructions').hide();
+  setTimeout(show($('.myReset')), 1900);
 }; // start
 
-
-// stackoverflow: javascript button
 var reset = function() {
   location.reload();
 };
-
 
 //this shuffles cards
 //https://bost.ocks.org/mike/shuffle/

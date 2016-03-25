@@ -9,31 +9,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
 </head>
 <body>
-  <!-- <video autoplay loop poster="" id="bgvid">
-    <source src="polina.webm" type="video/webm">
-    <source src="./project01/backgroundLoop.mov" type="video/mov">
-  </video> -->
-  <!-- <div class="pointer">pointer</div> -->
-  <!-- <div class="custom">auto</div> -->
   <div class="loading">
     <div id="myDiv" style="display: none">
       <img id="myImage" src="https://media.giphy.com/media/ntHRTkAOukqYg/giphy.gif" alt="magic picture">
-    </div>
+    </div> <!--start gif-->
     <div id="myDiv2" style="display: none">
       <img id="myImage" src="https://media.giphy.com/media/izURt1zfNvnG0/giphy.gif" alt="nuked">
-    </div>
-  </div>
+    </div> <!--nuke gif-->
+  </div> <!--holding gifs-->
   <div class="row">
-    <button class="myButton" onclick="start()">Start</button>
-    <button onclick="reset()">Reset</button>
-  </div> <!--start button -->
-
+    <button class="myStart" onclick="start()">Start</button>
+    <button class="myReset" onclick="reset()"></button>
+    <div class="instructions"> You get to play my game <br> Isn't that great...<br>
+    3 Sticks you win <br> 1 Nuke you lose <br> Get to Clicking </div>
+  </div> <!--start and reset button -->
   <div class="container">
     <!-- <div class="custom"></div> -->
     <div class="row">
       <div class="card left">
         <div class="front face">
-          <p>null tile1</p>
+          <p></p>
         </div>
         <div class="back face">
           <p></p>
@@ -41,7 +36,7 @@
       </div><!-- .card -->
       <div class="card middle">
         <div class="front face">
-          <p>null tile2</p>
+          <p></p>
         </div>
         <div class="back face">
           <p></p>
@@ -49,14 +44,13 @@
       </div><!-- .card -->
       <div class="card right">
         <div class="front face">
-          <p>null tile3</p>
+          <p></p>
         </div>
         <div class="back face">
           <p></p>
         </div>
       </div><!-- .card -->
     </div><!-- .row -->
-
   </div><!-- .container -->
   <script type="text/javascript" src="js/app.js"></script>
 </body>
