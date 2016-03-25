@@ -31,12 +31,29 @@ var array = [];
 $('.card').hide();
 
 
+var gif2 = (function(){
+  var myDiv2 = document.getElementById("myDiv2");
+
+  var show = function(){
+    myDiv2.style.display = "block";
+    setTimeout(hide, 1900);  // 5 seconds
+  };
+
+  var hide = function(){
+    myDiv2.style.display = "none";
+  };
+  show();
+});
+
 $('.card').on('click', function() {
   $(this).addClass('flip');
   var type = $(this).children()[1];
   if ( $(type).hasClass( 'bomb' )) {
-    window.alert("You lose");
-    return reset();
+    $('.card').hide();
+    gif2();
+    setTimeout(reset, 1900);
+    window.alert("Wow, you suck at life...smh");
+    // return reset();
 
   } else if ($(type).hasClass( 'safe' )) {
 
@@ -48,7 +65,8 @@ $('.card').on('click', function() {
 
     if (array.length === 3) {
       // TODO add prompt you win
-      return reset();
+      reset();
+      window.alert('You won, Nerd');
     }
   }
 // end of game
@@ -75,9 +93,9 @@ var start = function() {
 
     var show = function(){
       myDiv.style.display = "block";
+      myDiv.style.width = "100%";
       setTimeout(hide, 1900);  // 5 seconds
     };
-
 
     var hide = function(){
       myDiv.style.display = "none";
@@ -86,47 +104,49 @@ var start = function() {
   });
   gif();
 
+  var showBoard = function() {
+    // bunch of cards in itx
+    $('.card').show();
 
-  // bunch of cards in itx
-  $('.card').show();
+    var deck = [
+      new Card('stick'),
+      new Card('stick'),
+      new Card('stick'),
+      new Card('bomb'),
+      new Card('bomb'),
+      new Card('bomb'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe'),
+      new Card('safe')
+    ];
 
-  var deck = [
-    new Card('stick'),
-    new Card('stick'),
-    new Card('stick'),
-    new Card('bomb'),
-    new Card('bomb'),
-    new Card('bomb'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe'),
-    new Card('safe')
-  ];
+    deck = shuffle(deck);
+    // target all cards $('.card')
 
-  deck = shuffle(deck);
-  // target all cards $('.card')
+    // loop thru each card and
+    $('.back').each(function(index, el) {
+      var type = deck[index].type;
+      // apply a card as a class
+      $(el).addClass(type);
+    });
+  };
 
-  // loop thru each card and
-  $('.back').each(function(index, el) {
-    var type = deck[index].type;
-    // apply a card as a class
-    $(el).addClass(type);
-  });
-
+  setTimeout(showBoard, 1900);
+  $('.myButton').hide();
 }; // start
 
 
 // stackoverflow: javascript button
 var reset = function() {
-  window.alert('resetted');
   location.reload();
 };
 
