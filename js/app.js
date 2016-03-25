@@ -11,7 +11,6 @@ $('.card').hide();
 // nuke: you lose gif
 var gif2 = (function(){
   var nuke = document.getElementById("nuke");
-
   var show = function(){
     nuke.style.display = "block";
     setTimeout(hide, 1900);  // 5 seconds

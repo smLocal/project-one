@@ -1,7 +1,4 @@
-.uncovered {
-
-}
-
+/*three styles on page load*/
 .instructions {
   width: 231px;
   height: 202px;
@@ -16,7 +13,6 @@
   right: 0;
   color: #EF0;
 }
-
 
 .myStart {
     background:url(http://www.pathguy.com/dukehead.gif) no-repeat;
