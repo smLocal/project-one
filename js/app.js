@@ -10,15 +10,15 @@ $('.card').hide();
 
 // nuke: you lose gif
 var gif2 = (function(){
-  var myDiv2 = document.getElementById("myDiv2");
+  var nuke = document.getElementById("nuke");
 
   var show = function(){
-    myDiv2.style.display = "block";
+    nuke.style.display = "block";
     setTimeout(hide, 1900);  // 5 seconds
   };
 
   var hide = function(){
-    myDiv2.style.display = "none";
+    nuke.style.display = "none";
   };
   show();
 }); // end of nuke function
@@ -58,17 +58,17 @@ var start = function() {
   //http://stackoverflow.com/questions/8618570/displaying-a-loading-gif-for-5-seconds-automatically
   //calls gify
   var gif = (function(){
-    var myDiv = document.getElementById("myDiv");
+    var start = document.getElementById("start");
 
     // start gif
     var show = function(){
-      myDiv.style.display = "block";
-      myDiv.style.width = "100%";
+      start.style.display = "block";
+      start.style.width = "100%";
       setTimeout(hide, 1900);  // 5 seconds
     };
 
     var hide = function(){
-      myDiv.style.display = "none";
+      start.style.display = "none";
     };
     show();
   });
