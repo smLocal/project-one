@@ -1,4 +1,16 @@
 /*three styles on page load*/
+@media screen and (max-width: 980px) {
+    #pagewrap {
+        width: 94%;
+    }
+    #content {
+        width: 65%;
+    }
+    #sidebar {
+        width: 30%;
+    }
+}
+
 .instructions {
   width: 231px;
   height: 202px;
