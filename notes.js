@@ -1,4 +1,4 @@
-<video autoplay loop poster="" id="bgvid">
+<video autoplay loop poster= "" id="bgvid">
     <source src="polina.webm" type="video/webm">
     <source src="./project01/backgroundLoop.mov" type="video/mov">
   </video> -->
