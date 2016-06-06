@@ -2,6 +2,7 @@
 var row = $($('.row').get(1));
 for (var i = 0; i < 5; i++) {
   row.clone().appendTo('.container');
+  // row.clone().enhanceWithin()
 }
 var array = [];
 
